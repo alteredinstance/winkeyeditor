@@ -53,3 +53,7 @@ For quick iteration you can also use the standard `dotnet build` / `dotnet run`.
 - When a program running as administrator has focus, Windows doesn't send its keystrokes to the hook. To block keys in those windows too (some games and launchers run elevated), run WinKey Editor as administrator.
 - Ctrl+Alt+Del and Win+L can't be blocked by any keyboard hook.
 - The exe is unsigned, so SmartScreen may warn on first launch ("More info" → "Run anyway").
+
+## License
+
+[MIT](LICENSE)
