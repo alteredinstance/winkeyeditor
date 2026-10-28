@@ -62,8 +62,14 @@ public sealed record Shortcut(string Id, string Description, Mods Mods, Keys[] K
 
 public static class ShortcutCatalog
 {
+    // Special entries with no key combos; the hook handles these directly.
+    public const string WinKeyId = "Win key";
+    public const string StartMenuId = "Win (tap alone)";
+
     public static readonly IReadOnlyList<Shortcut> BuiltIn =
     [
+        new(WinKeyId, "The Windows key itself (blocks every Win shortcut)", Mods.None, []),
+        new(StartMenuId, "Open the Start menu", Mods.None, []),
         Shortcut.Of(Mods.None, Keys.A, "Open Quick Settings"),
         Shortcut.Of(Mods.None, Keys.B, "Focus the system tray"),
         Shortcut.Of(Mods.None, Keys.C, "Open Copilot"),
